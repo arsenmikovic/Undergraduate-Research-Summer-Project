@@ -1,0 +1,15 @@
+name: pytorch_env
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - numpy
+  - pytorch=2.5.1=cuda126_generic_py310_hc4b7dcd_215
+  - torchvision
+  - torchaudio
+  - opencv
+  - matplotlib
+  - transformers
+  - pip
+  - pip:

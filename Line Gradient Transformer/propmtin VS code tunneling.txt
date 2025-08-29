@@ -1,0 +1,32 @@
+clifton auth
+
+clifton ssh-config write
+
+ssh u5aa.aip2.isambard
+
+SECOND PART TO VS
+
+#!/bin/bash
+#SBATCH --job-name=code_tunnel
+#SBATCH --gpus=1            # this also allocates 72 CPU cores and 115GB memory
+#SBATCH --time=1:00:00
+#SBATCH --output=code_tunnel_%j.out
+
+# Start named VS Code tunnel for remote connection to compute node
+~/opt/vscode_cli/code tunnel --name "i-ai_compute"
+
+
+ctrl shift P
+
+connect to Tunnel
+
+
+scp .\LineTransformer.py u5aa.aip2.isambad:
+
+
+conda activate test
+
+Cancel the job using the job ID returned by the sbatch command used to submit the code tunnel job
+
+scancel <JOB_ID>
+substituting <JOB_ID> for the job ID output by the sbatch command used to the start the job.
